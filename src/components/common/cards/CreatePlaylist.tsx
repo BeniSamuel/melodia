@@ -4,7 +4,6 @@ import { PlayListCard } from "../../../types/playlist-card.type";
 
 const CreatePlaylist: React.FC<PlayListCard> = ({
   createPlaylist,
-  setCreatePlaylist,
 }) => {
   const navigate = useNavigate();
   const handleClick = () => {
