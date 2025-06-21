@@ -1,15 +1,16 @@
-import React from 'react'
-import Navbar from '../../components/common/navbar/Navbar'
+import React, {useState} from "react";
+import HomeLayout from "../../layouts/common/HomeLayout";
+import PopularSong from "../../components/home/PopularSong";
 
 const Home: React.FC = () => {
+  const [showLeftComponent, setShowLeftComponent] = useState(false);
   return (
-    <div>
-        <div>
-            <Navbar />
-        </div>
-        <div></div>
-    </div>
-  )
-}
+    <HomeLayout>
+      <div className=" flex flex-col py-5 px-5">
+        <PopularSong />
+      </div>
+    </HomeLayout>
+  );
+};
 
-export default Home
+export default Home;
