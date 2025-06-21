@@ -8,7 +8,7 @@ const HomeRightCard: React.FC = () => {
 
   return (
     <div
-      className={` bg-[#131313] w-[28%] rounded-xl flex flex-col px-5 py-4 ${
+      className={` bg-[#131313] w-[28%] rounded-xl flex flex-col gap-6 px-5 py-4 ${
         isPlaying ? "h-[75vh]" : "h-[85vh]"
       } `}
     >
@@ -27,6 +27,11 @@ const HomeRightCard: React.FC = () => {
             <img src={close} />
           </div>
         </div>
+      </div>
+      <div className=" w-full h-80 bg-gradient-to-b from-[#225673] to-[#40A2D9] rounded-xl" />
+      <div>
+        <div className=" text-white">{currentSong?.song_name}</div>
+        <div className=" text-[#686868]">{currentSong?.artist}</div>
       </div>
     </div>
   );
