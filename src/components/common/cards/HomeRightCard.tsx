@@ -4,10 +4,14 @@ import more_options from "../../../assets/navbar/options.svg";
 import close from "../../../assets/home-right-component/close.svg";
 
 const HomeRightCard: React.FC = () => {
-  const { currentSong, setIsPlaying } = usePlayer();
+  const { currentSong, setIsPlaying, isPlaying } = usePlayer();
 
   return (
-    <div className=" bg-[#131313] h-[85vh] w-[28%] rounded-xl flex flex-col px-5 py-4">
+    <div
+      className={` bg-[#131313] w-[28%] rounded-xl flex flex-col px-5 py-4 ${
+        isPlaying ? "h-[75vh]" : "h-[85vh]"
+      } `}
+    >
       <div className=" flex flex-row justify-between items-center">
         <div className=" text-white">{currentSong?.song_name}</div>
         <div className=" flex flex-row gap-3 items-center">

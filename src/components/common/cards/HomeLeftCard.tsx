@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import LikesCard from "../card/LikesCard";
 import PlaylistCard from "../card/PlaylistCard";
 import { useNavigate } from "react-router-dom";
+import { usePlayer } from "../../../context/PlayContext";
 
 const HomeLeftCard: React.FC = () => {
   const [createPlaylist, setCreatePlaylist] = useState<boolean>(false);
+  const { isPlaying } = usePlayer();
   const navigate = useNavigate();
 
   function handleClick() {
@@ -12,7 +14,7 @@ const HomeLeftCard: React.FC = () => {
   }
 
   return (
-    <div className=" h-[85vh] bg-[#131313] w-[30%] rounded-xl px-7 py-4 flex flex-col gap-10 relative">
+    <div className={` bg-[#131313] w-[30%] rounded-xl px-7 py-4 flex flex-col gap-10 relative ${ isPlaying ? "h-[75vh]" : "h-[85vh]"  }`}>
       <PlaylistCard
         createPlaylist={createPlaylist}
         setCreatePlaylist={setCreatePlaylist}
