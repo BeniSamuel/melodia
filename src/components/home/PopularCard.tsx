@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { SongType } from "../../types/song.type";
-import play_button from "../../assets/popular/play_button.svg";
 import Button from "../common/PlayStopButton/Button";
+import { usePlayer } from "../../context/PlayContext";
 
 const PopularCard: React.FC<SongType> = (prop) => {
   const [showPlay, setShowPlay] = useState(false);
+  const { playSong } = usePlayer();
+
+
   return (
     <div
       className=" flex flex-col gap-3 cursor-pointer relative"
@@ -12,6 +15,7 @@ const PopularCard: React.FC<SongType> = (prop) => {
         setShowPlay(true);
       }}
       onMouseLeave={() => {setShowPlay(false)}}
+      onClick={() => {playSong(prop)}}
     >
       <div className={` bg-gray-500 h-56 w-64 rounded-lg`}>
         {prop.cover}
