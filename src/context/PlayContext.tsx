@@ -90,19 +90,19 @@ const PlayProvider = ({ children }: { children: ReactNode }) => {
     }
   };
 
-  const togglePlayPause = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-        setIsPlaying(false);
-      } else {
-        audioRef.current
-          .play()
-          .catch((error) => console.error("Playback error:", error));
-        setIsPlaying(true);
-      }
-    }
-  };
+  // const togglePlayPause = () => {
+  //   if (audioRef.current) {
+  //     if (isPlaying) {
+  //       audioRef.current.pause();
+  //       setIsPlaying(false);
+  //     } else {
+  //       audioRef.current
+  //         .play()
+  //         .catch((error) => console.error("Playback error:", error));
+  //       setIsPlaying(true);
+  //     }
+  //   }
+  // };
 
   return (
     <PlayContext.Provider
