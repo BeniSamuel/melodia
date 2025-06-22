@@ -1,8 +1,17 @@
 import React from 'react'
+import PopularSongCard from './PopularSongCard'
 
 const RecentlyPlayed: React.FC = () => {
   return (
-    <div>RecentlyPlayed</div>
+    <div className=" text-white flex flex-col gap-12">
+      <div className=" flex flex-row justify-between px-2">
+        <div className=" font-medium cursor-pointer">Recent Played</div>
+        <div className=" text-[#737272] cursor-pointer">See all</div>
+      </div>
+      <div className=" w-full">
+        <PopularSongCard />
+      </div>
+    </div>
   )
 }
 

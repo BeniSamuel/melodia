@@ -18,7 +18,7 @@ const PopularCard: React.FC<SongType> = (prop) => {
       onClick={() => {playSong(prop)}}
     >
       <div className={` bg-gray-500 h-56 w-64 rounded-lg`}>
-        {prop.cover}
+        {/* {prop.cover} */}
       </div>
       <div className=" flex flex-row justify-between">
         <div>{prop.song_name}</div>
