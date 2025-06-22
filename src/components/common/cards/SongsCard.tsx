@@ -6,7 +6,7 @@ const SongsCard: React.FC<SongCardType> = ({ children }) => {
   const { isPlaying } = usePlayer();
   return (
     <div
-      className={` bg-[#131313] rounded-xl ${
+      className={` bg-[#131313] rounded-xl overflow-y-auto ${
         isPlaying ? "w-[42%] h-[75vh]" : "w-[70%]"
       }`}
     >
