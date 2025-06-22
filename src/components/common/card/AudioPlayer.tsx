@@ -4,9 +4,12 @@ import playing_button from "../../../assets/playing-indicator/playing.svg";
 import stop_button from "../../../assets/playing-indicator/stop.svg";
 import next from "../../../assets/playing-indicator/right-skip.svg";
 import previous from "../../../assets/playing-indicator/left-skip.svg";
+import expand_icon from "../../../assets/playing-indicator/expand-icon.svg";
+import { useNavigate } from "react-router-dom";
 
 const AudioPlayer: React.FC = () => {
   const {
+    currentSong,
     isPlaying,
     setIsPlaying,
     nextSong,
@@ -18,6 +21,7 @@ const AudioPlayer: React.FC = () => {
 
   const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -103,7 +107,7 @@ const AudioPlayer: React.FC = () => {
             />
           </div>
         </div>
-        <div className="flex items-center gap-2 mt-2">
+        <div className="flex flex-row items-center gap-2">
           <span>🔊</span>
           <input
             type="range"
@@ -114,6 +118,9 @@ const AudioPlayer: React.FC = () => {
             onChange={handleVolumeChange}
             className="w-28 h-1 bg-gray-600 rounded-lg cursor-pointer accent-[#FFFFFF]"
           />
+          <div className=" h-6 w-6 cursor-pointer" onClick={() => {navigate(`/audio/${currentSong?.id}`)}}>
+            <img src={expand_icon}/>
+          </div>
         </div>
       </div>
     </div>
