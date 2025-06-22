@@ -15,7 +15,7 @@ const HomeLayout: React.FC<SongCardType> = ({ children }) => {
       <div>
         <Navbar />
       </div>
-      <div className=" flex flex-row gap-3">
+      <div className=" flex flex-row gap-3 overflow-y-auto">
         <HomeLeftCard />
         <SongsCard>{children}</SongsCard>
         {isPlaying && <HomeRightCard />}
