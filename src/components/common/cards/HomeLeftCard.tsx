@@ -14,7 +14,11 @@ const HomeLeftCard: React.FC = () => {
   }
 
   return (
-    <div className={` bg-[#131313] w-[30%] rounded-xl px-7 py-4 flex flex-col gap-10 relative ${ isPlaying ? "h-[75vh]" : "h-[85vh]"  }`}>
+    <div
+      className={` bg-[#131313] w-[30%] rounded-xl px-7 py-4 flex flex-col gap-10 relative ${
+        isPlaying ? "h-[75vh]" : "h-[88vh]"
+      }`}
+    >
       <PlaylistCard
         createPlaylist={createPlaylist}
         setCreatePlaylist={setCreatePlaylist}

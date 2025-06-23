@@ -9,7 +9,7 @@ const HomeRightCard: React.FC = () => {
   return (
     <div
       className={` bg-[#131313] w-[28%] rounded-xl flex flex-col gap-6 px-5 py-4 ${
-        isPlaying ? "h-[75vh]" : "h-[85vh]"
+        isPlaying ? "h-[75vh]" : "h-[88vh]"
       } `}
     >
       <div className=" flex flex-row justify-between items-center">
@@ -19,7 +19,7 @@ const HomeRightCard: React.FC = () => {
             <img src={more_options} />
           </div>
           <div
-            className=" h-4 w-4 cursor-pointer"
+            className=" h-3 w-3 cursor-pointer"
             onClick={() => {
               setIsPlaying(false);
             }}
