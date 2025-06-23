@@ -10,7 +10,7 @@ const FindSomething: React.FC = () => {
         <input
           type="search"
           placeholder="Search for content"
-          className=" placeholder:text-[#858585] outline-none bg-transparent bg-[#363535] py-3 px-4 text-white w-96 rounded-lg"
+          className=" placeholder:text-[#858585] outline-none bg-[#363535] py-3 px-4 text-white w-96 rounded-lg"
         />
       </div>
     </div>
