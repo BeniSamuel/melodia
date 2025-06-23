@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
         <Search />
       </div>
       <div>
-        <div className=" text-black bg-[#737D97] h-9 w-10 rounded-full flex flex-col items-center justify-center font-medium text-xl">
+        <div className=" text-black bg-[#737D97] h-9 w-10 rounded-full flex flex-col items-center justify-center font-medium text-xl cursor-pointer">
           B
         </div>
       </div>
