@@ -31,7 +31,7 @@ const PlaylistCard: React.FC<PlayListCard> = ({
         </div>
         <div className=" flex flex-row items-center gap-3">
           <div className=" text-[#737272]">Recent</div>
-          <img src={list} className=" h-10 w-10" />
+          <img src={list} className=" h-10 w-10 cursor-pointer" />
         </div>
       </div>
     </div>
