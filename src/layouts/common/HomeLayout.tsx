@@ -20,7 +20,7 @@ const HomeLayout: React.FC<SongCardType> = ({ children }) => {
         <SongsCard>{children}</SongsCard>
         {isPlaying && <HomeRightCard />}
       </div>
-      { isPlaying && <SongIndicator />}
+      {isPlaying && <SongIndicator />}
     </div>
   );
 };
