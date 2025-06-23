@@ -69,12 +69,10 @@ const PlayProvider = ({ children }: { children: ReactNode }) => {
     if (audioRef.current) {
       audioRef.current.src = song.song_name;
       audioRef.current.volume = volume;
-      audioRef.current
-        .play()
-        .catch((error) => {
-          console.error("Playback error:", error);
-          setIsPlaying(false);
-        });
+      audioRef.current.play().catch((error) => {
+        console.error("Playback error:", error);
+        setIsPlaying(false);
+      });
     }
   };
 
